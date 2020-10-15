@@ -1,0 +1,96 @@
+@font-face {
+    font-family: 'title_bord';
+    src: url('fonts/gan/ganclm_bold-webfont.ttf') format('truetype'),
+    url('fonts/trashimclm-bold-webfont.woff2') format('woff2'),
+    url('fonts/trashimclm-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'efrat';
+    src: url('fonts/varelaround-regular-webfont.woff2') format('woff2'),
+    url('fonts/varelaround-regular-webfont.woff') format('woff'),
+    url('fonts/Varela_Round/VarelaRound-Regular.ttf') format('truetype')
+    url('fonts/rubik-regular-webfont.woff2') format('woff2'),
+    url('fonts/rubik-regular-webfont.woff') format('woff'),
+    url('fonts/rubik-medium-webfont.woff2'), format('woff2'),
+    url('fonts/rubik-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    font-size: 1rem;
+    font-family: 'efrat';
+    direction: rtl;
+    box-sizing: border-box;
+}
+
+header {
+    background: #0ACF83;
+    padding: 2rem;
+}
+
+h1 {
+    color: white;
+    font-family: 'title_bord';
+    font-size: 3rem;
+    text-align: center;
+    line-height: 65px;
+    letter-spacing: 0.05em;
+}
+
+h2 {
+    padding-top: 2rem;
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+.search {
+    display: flex;
+    margin: 10px;
+    align-items: baseline;
+}
+
+.info {
+    margin: 20px;
+    margin-top: 20px;
+}
+
+.sidebar, a {
+    float: right;
+    width: 50%;
+    height: 250px;
+}
+
+.results {
+    padding-right: 19px;
+    margin: 20px;
+    background: #FFFFFF;
+    border: 2px solid #0ACF83;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+
+li {
+    margin: 10px;
+}
+
+.results li {
+    list-style-type: none;
+}
+
+footer {
+    background: #0ACF83;
+    padding: 1rem;
+    line-height: 0.25rem;
+}
+
+footer p {
+    text-align-last: center;
+}
+.bank {
+    font-weight: bold;
+}
