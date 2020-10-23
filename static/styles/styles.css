@@ -1,0 +1,136 @@
+@font-face {
+    font-family: my_fonts;
+    src: local('my_fonts'),url('fonts/gan/ganclm_bold-webfont.ttf') format('truetype'),
+    url('fonts/trashimclm-bold-webfont.woff2') format('woff2'),
+    url('fonts/trashimclm-bold-webfont.woff') format('woff');
+}
+
+@font-face {
+    font-family: my_fonts2;
+    src: local('my_fonts2'), url('fonts/Varela_Round/VarelaRound-Regular.ttf') format('truetype'),
+    url('fonts/varelaround-regular-webfont.woff2') format('woff2'),
+    url('fonts/varelaround-regular-webfont.woff') format('woff'), 
+    url('fonts/Rubik/Rubik-Regular.ttf') format('truetype'),
+    url('fonts/rubik-regular-webfont.woff2') format('woff2'),
+    url('fonts/rubik-regular-webfont.woff') format('woff'),
+    url('fonts/rubik-medium-webfont.woff2') format('woff2'),
+    url('fonts/rubik-medium-webfont.woff') format('woff'); 
+}
+
+* {
+    font-size: 16px;
+    font-family: my_fonts2, Arial, Helvetica, sans-serif;
+    direction: rtl;
+    box-sizing: border-box;
+}
+
+*, body {
+    background-color: white;
+    color: black;
+}
+
+header {
+    background: #0ACF83;
+    padding: 2rem;
+}
+
+h1 {
+    font-family: my_fonts;
+    text-align: center;
+    letter-spacing: 0.05em;
+    background: none;
+    color: white;
+}
+
+h2 {
+    font-size: 2rem;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.info {
+    margin: 20px;
+    margin-top: 20px;
+}
+
+.image {
+    zoom: 10%;
+    padding-top: 20rem;
+    float: left;
+    outline: none;
+    overflow: auto;
+}
+
+#search {
+    clear: both;
+    display: flex;
+    align-items: baseline;
+    padding: 1rem;
+}
+
+#results {
+    padding-bottom: 5rem;
+}
+
+.total_results {
+    padding-right: 1.5rem;
+}
+
+.results {
+    padding: 10px;
+    margin: 15px;
+    border: 2px solid #0ACF83;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+
+li {
+    margin: 10px;
+}
+
+.results li {
+    list-style-type: none;
+}
+
+.bank, .num_results {
+    font-weight: bold;
+}
+
+.icon_waze {
+    font-size: 10rem;
+    text-align: left;
+    float: left;
+}
+
+.footer {
+    background: #0ACF83;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4em;
+    display: grid;
+    text-align: center;
+    align-items: center;
+}
+
+footer a {
+    text-align-last: center;
+    margin: 0em;
+    background: none;
+    text-decoration: none;
+    color: black;
+}
+
+@media screen and (min-width: 65em) {
+    .card_results {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 2px;
+    }
+    .image {
+        padding-left: 30rem;
+        padding-top: 5rem;
+        zoom: 25%
+    }
+}
