@@ -14,16 +14,14 @@
 
 <body>
     <header>
-        <h1>חיפוש סניפי בנק לפי עיר</h1>
+        <h1>סניף בקליק</h1>
     </header>
     <div class="info">
         <div class="information">
             <img class="image" src='/static/images/map-location.png' alt="location emoji">
-            <p>
-                עברתם דירה? מחפשים להחליף בנק? סתם מסוקרנים איזה סניפי בנק יש אצלכם בעיר
-            </p>
-            <p>.במיוחד בשבילכם יצרנו את העמוד הזה, חיפוש סניף לפי עיר בלחיצת כפתור
-                <br>כן, בצורה הכי פשוטה, בלי תפריטים, הגדרות או כל דבר מיותר אחר...</p>
+            <p>עברתם דירה? מעוניינים להחליף בנק? מסוקרנים לדעת היכן נמצאים כל סניפי הבנק הפרוסים אצלכם ברחבי העיר?</p>
+            <p>"סניף בקליק", העמוד שימצא לכם את סניפי הבנק לפי עיר בלחיצת כפתור.
+                <br>הכי פשוט, הכי קל, הכי מהיר!</p>
         </div>
 
     </div>
@@ -32,7 +30,7 @@
             <div class="col-auto ">
                 <label for="city" class="visually-hidden">הקלד שם עיר</label>
                 <input class="form-control" id="city" name="city" type="text" placeholder="הקלד שם עיר" tabindex=0
-                    minlength="6" autofocus>
+                    minlength="2" autofocus>
             </div>
             <div class="col-auto">
                 <button type="submit" value="Submit" class="btn btn-success">חיפוש</button>
@@ -73,7 +71,7 @@
     </div>
     <footer>
         <div class="footer">
-            <a href="mailto:efratush.by@gmial.com">©כל הזכויות שמורות לאפרת</a>
+            <a href="mailto:efratush.by@gmial.com" target="_blank">©כל הזכויות שמורות לאפרת</a>
         </div>
     </footer>
 
