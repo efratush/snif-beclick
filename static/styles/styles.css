@@ -1,20 +1,11 @@
 @font-face {
     font-family: my_fonts;
-    src: local('my_fonts'),url('fonts/gan/ganclm_bold-webfont.ttf') format('truetype'),
-    url('fonts/trashimclm-bold-webfont.woff2') format('woff2'),
-    url('fonts/trashimclm-bold-webfont.woff') format('woff');
+    src: local('my_fonts'), url('fonts/gan/ganclm_bold-webfont.ttf') format('truetype'), url('fonts/trashimclm-bold-webfont.woff2') format('woff2'), url('fonts/trashimclm-bold-webfont.woff') format('woff');
 }
 
 @font-face {
     font-family: my_fonts2;
-    src: local('my_fonts2'), url('fonts/Varela_Round/VarelaRound-Regular.ttf') format('truetype'),
-    url('fonts/varelaround-regular-webfont.woff2') format('woff2'),
-    url('fonts/varelaround-regular-webfont.woff') format('woff'), 
-    url('fonts/Rubik/Rubik-Regular.ttf') format('truetype'),
-    url('fonts/rubik-regular-webfont.woff2') format('woff2'),
-    url('fonts/rubik-regular-webfont.woff') format('woff'),
-    url('fonts/rubik-medium-webfont.woff2') format('woff2'),
-    url('fonts/rubik-medium-webfont.woff') format('woff'); 
+    src: local('my_fonts2'), url('fonts/Varela_Round/VarelaRound-Regular.ttf') format('truetype'), url('fonts/varelaround-regular-webfont.woff2') format('woff2'), url('fonts/varelaround-regular-webfont.woff') format('woff'), url('fonts/Rubik/Rubik-Regular.ttf') format('truetype'), url('fonts/rubik-regular-webfont.woff2') format('woff2'), url('fonts/rubik-regular-webfont.woff') format('woff'), url('fonts/rubik-medium-webfont.woff2') format('woff2'), url('fonts/rubik-medium-webfont.woff') format('woff');
 }
 
 * {
@@ -48,6 +39,10 @@ h2 {
     font-weight: bolder;
 }
 
+.content {
+    padding-bottom: 5em;
+}
+
 .info {
     margin: 20px;
     margin-top: 20px;
@@ -66,10 +61,6 @@ h2 {
     display: flex;
     align-items: baseline;
     padding: 1rem;
-}
-
-#results {
-    padding-bottom: 5rem;
 }
 
 .total_results {

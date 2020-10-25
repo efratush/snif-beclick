@@ -16,58 +16,62 @@
     <header>
         <h1>סניף בקליק</h1>
     </header>
-    <div class="info">
-        <div class="information">
-            <img class="image" src='/static/images/map-location.png' alt="location emoji">
-            <p>עברתם דירה? מעוניינים להחליף בנק? מסוקרנים לדעת היכן נמצאים כל סניפי הבנק הפרוסים אצלכם ברחבי העיר?</p>
-            <p>"סניף בקליק", העמוד שימצא לכם את סניפי הבנק לפי עיר בלחיצת כפתור.
-                <br>הכי פשוט, הכי קל, הכי מהיר!</p>
-        </div>
+    <div class="content">
+        <div class="info">
+            <div class="information">
+                <img class="image" src='/static/images/map-location.png' alt="location emoji">
+                <p>עברתם דירה? מעוניינים להחליף בנק? מבקשים לדעת היכן נמצאים כל סניפי הבנק הפרוסים אצלכם ברחבי העיר?</p>
+                <p>"סניף בקליק", העמוד שימצא לכם את סניפי הבנק לפי עיר בלחיצת כפתור.
+                    <br>הכי פשוט, הכי קל, הכי מהיר!</p>
+            </div>
 
-    </div>
-    <div id="search">
-        <form id="search-form" action="/" method="GET" class="row justify-content-center">
-            <div class="col-auto ">
-                <label for="city" class="visually-hidden">הקלד שם עיר</label>
-                <input class="form-control" id="city" name="city" type="text" placeholder="הקלד שם עיר" tabindex=0
-                    minlength="2" autofocus>
-            </div>
-            <div class="col-auto">
-                <button type="submit" value="Submit" class="btn btn-success">חיפוש</button>
-            </div>
-        </form>
-    </div>
-    {% if result %}
-    <div id="results">
-        <h2>תוצאות</h2>
-        <p class="total_results">נמצאו<samp class="num_results"> {{bank_data.total}} </samp>תוצאות</p>
-        <div class="card_results">
-            {% for bank in bank_data.records %}
-            <ul class="results">
-                <li class="bank">{{bank.Bank_Name}} ({{bank.Branch_Code}})</li>
-                <li class="address">
-                    <svg id="i-location" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="25" height="25"
-                        fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round"
-                        stroke-width="2">
-                        <circle cx="16" cy="11" r="4" />
-                        <path d="M24 15 C21 22 16 30 16 30 16 30 11 22 8 15 5 8 10 2 16 2 22 2 27 8 24 15 Z" /></svg>
-                    <strong>כתובת: </strong>
-                    {{bank.Branch_Address}}, {{bank.City}}</li>
-                <li class="phone"><svg id="i-telephone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"
-                        width="25" height="25" fill="none" stroke="currentcolor" stroke-linecap="round"
-                        stroke-linejoin="round" stroke-width="2">
-                        <path
-                            d="M3 12 C3 5 10 5 16 5 22 5 29 5 29 12 29 20 22 11 22 11 L10 11 C10 11 3 20 3 12 Z M11 14 C11 14 6 19 6 28 L26 28 C26 19 21 14 21 14 L11 14 Z" />
-                        <circle cx="16" cy="21" r="4" />
-                    </svg> <strong>טלפון:</strong> <a href="tel:{{bank.Telephone}}">{{bank.Telephone}}</a></li>
-                <li class="waze"><img src="/static/images/waze.png" alt="icon wase"> ניווט עם
-                    <a
-                        href="Http://www.waze.com/ul?ll={{bank.Y_Coordinate}},{{bank.X_Coordinate}}&navigate=yes">waze</a>
-                </li>
-            </ul>
-            {% endfor %}
         </div>
-        {% endif %}
+        <div id="search">
+            <form id="search-form" action="/" method="GET" class="row justify-content-center">
+                <div class="col-auto ">
+                    <label for="city" class="visually-hidden">הקלד שם עיר</label>
+                    <input class="form-control" id="city" name="city" type="text" placeholder="הקלד שם עיר" tabindex=0
+                        minlength="2" autofocus>
+                </div>
+                <div class="col-auto">
+                    <button type="submit" value="Submit" class="btn btn-success">חיפוש</button>
+                </div>
+            </form>
+        </div>
+        {% if result %}
+        <div id="results">
+            <h2>תוצאות</h2>
+            <p class="total_results">נמצאו<samp class="num_results"> {{bank_data.total}} </samp> תוצאות עבור 
+                '{{bank_data.filters.City}}'.</p>
+            <div class="card_results">
+                {% for bank in bank_data.records %}
+                <ul class="results">
+                    <li class="bank">{{bank.Bank_Name}} ({{bank.Branch_Code}})</li>
+                    <li class="address">
+                        <svg id="i-location" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="25"
+                            height="25" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2">
+                            <circle cx="16" cy="11" r="4" />
+                            <path d="M24 15 C21 22 16 30 16 30 16 30 11 22 8 15 5 8 10 2 16 2 22 2 27 8 24 15 Z" />
+                            </svg>
+                        <strong>כתובת: </strong>
+                        {{bank.Branch_Address}}, {{bank.City}}</li>
+                    <li class="phone"><svg id="i-telephone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"
+                            width="25" height="25" fill="none" stroke="currentcolor" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="2">
+                            <path
+                                d="M3 12 C3 5 10 5 16 5 22 5 29 5 29 12 29 20 22 11 22 11 L10 11 C10 11 3 20 3 12 Z M11 14 C11 14 6 19 6 28 L26 28 C26 19 21 14 21 14 L11 14 Z" />
+                            <circle cx="16" cy="21" r="4" />
+                        </svg> <strong>טלפון:</strong> <a href="tel:{{bank.Telephone}}">{{bank.Telephone}}</a></li>
+                    <li class="waze"><img src="/static/images/waze.png" alt="icon wase"> ניווט עם
+                        <a
+                            href="Http://www.waze.com/ul?ll={{bank.Y_Coordinate}},{{bank.X_Coordinate}}&navigate=yes">waze</a>
+                    </li>
+                </ul>
+                {% endfor %}
+            </div>
+            {% endif %}
+        </div>
     </div>
     <footer>
         <div class="footer">
